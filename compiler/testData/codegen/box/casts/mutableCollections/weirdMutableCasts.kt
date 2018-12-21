@@ -1,5 +1,4 @@
 // IGNORE_BACKEND: JVM_IR
-// TARGET_BACKEND: JVM
 
 // WITH_RUNTIME
 
@@ -18,7 +17,7 @@ inline fun asFailsWithCCE(operation: String, cast: () -> Unit) {
     try {
         cast()
     }
-    catch (e: java.lang.ClassCastException) {
+    catch (e: ClassCastException) {
         return
     }
     catch (e: Throwable) {
@@ -73,7 +72,7 @@ inline fun <reified T> reifiedAsFailsWithCCE(x: Any, operation: String) {
     try {
         x as T
     }
-    catch (e: java.lang.ClassCastException) {
+    catch (e: ClassCastException) {
         return
     }
     catch (e: Throwable) {
