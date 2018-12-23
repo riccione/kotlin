@@ -59,6 +59,11 @@ public class DiagnosticsWithUnsignedTypesGenerated extends AbstractDiagnosticsWi
         runTest("compiler/testData/diagnostics/testsWithUnsignedTypes/overloadResolutionOfBasicOperations.kt");
     }
 
+    @TestMetadata("signedUnsignedTypeMismatchOnTopLevel.kt")
+    public void testSignedUnsignedTypeMismatchOnTopLevel() throws Exception {
+        runTest("compiler/testData/diagnostics/testsWithUnsignedTypes/signedUnsignedTypeMismatchOnTopLevel.kt");
+    }
+
     @TestMetadata("unsignedLiteralsInsideConstVals.kt")
     public void testUnsignedLiteralsInsideConstVals() throws Exception {
         runTest("compiler/testData/diagnostics/testsWithUnsignedTypes/unsignedLiteralsInsideConstVals.kt");
